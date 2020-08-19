@@ -63,7 +63,7 @@ unless($@) {
   use Switch 'Perl6';
 }
 
-use Nagios::Plugin;
+use Monitoring::Plugin;
 
 # use vars qw($VERSION $PROGNAME $result);
 our ( $VERSION, $PROGNAME, $result, $rawdata );
@@ -93,7 +93,7 @@ my @allowed_checks = (
 );
 
 # II. Usage/Help
-my $p = Nagios::Plugin->new(
+my $p = Monitoring::Plugin->new(
     usage => "Usage: %s 
        [ -q|--query=These are mapped to specific fs_cli -x checks
                     e.g. show-calls-count is mapped to 'show calls count'
